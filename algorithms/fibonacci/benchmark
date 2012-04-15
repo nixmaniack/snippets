@@ -1,0 +1,12 @@
+$ time ./fibonacci_recursive
+1836311903
+./fibonacci_recursive  10.19s user 0.00s system 99% cpu 10.209 total
+
+$ time ./fibonacci_recursive_dynamic 
+1836311903
+./fibonacci_recursive_dynamic  0.00s user 0.00s system 0% cpu 0.003 total
+
+$ time ./fibonacci_nonrecursive     
+1836311903
+./fibonacci_nonrecursive  0.00s user 0.00s system 0% cpu 0.003 total
+
