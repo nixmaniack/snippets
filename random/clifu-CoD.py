@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from bs4 import BeautifulSoup
-import requests
-r = requests.get('http://www.commandlinefu.com/commands/random')
-soup = BeautifulSoup(r.content)
-print soup.find("div", attrs={'class': 'summary'}).string
-print soup.find("div", attrs={'class': 'command'}).string
+import urllib2
+import json
 
+jdata = json.loads(urllib2.urlopen('http://www.commandlinefu.com/commands/random/json').read())
+
+print "Summary: " + jdata[0]['summary']
+print "Command: " + jdata[0]['command']
